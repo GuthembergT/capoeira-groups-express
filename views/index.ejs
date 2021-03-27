@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Capoeirista Database</h1>
+    <form class="new">
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" placeholder="Enter name">
+      </div>
+      <div>
+        <label for="nickname">Capoeira Name:</label>
+        <input id="nickname" type="text" name="nickname" placeholder="Enter Capoeira name">
+      </div>
+      <div>
+        <label for="rank">Rank:</label>
+        <input id="rank" type="text" name="rank" placeholder="Enter rank (Graduado/Monitor/Formado)">
+      </div>
+      <div>
+        <label for="group">Group Name:</label>
+        <input id="group" type="text" name="group" placeholder="Enter group name">
+      </div>
+      <div>
+        <label for="country">Country:</label>
+        <input id="country" type="text" name="country" placeholder="Enter country">
+      </div>
+      <div>
+        <label for="logo">Group Logo:</label>
+        <input id="logo" type="file" name="file-to-upload" placeholder="">
+      </div>
+      <input type="submit" class="submitNew" value="Add Capoeirista">
+    </form>
+    <button id="clearCompleted">CLEAR COMPLETED</button>
+    <button id="clear">CLEAR</button>
+
+    <ul id="list">
+      <% for(i = 0; i < capoeiristas.length; i++) { %>
+          <li class="person">
+            <div>
+              <div>
+                <section class="info">
+                  <h2 class="rank"><%= capoeiristas[i].rank %></h2>
+                  <h2 class="nickname"><%= capoeiristas[i].nickname %></h2>
+                  <h3 class="name"><%= capoeiristas[i].name %></h3>
+                  <h3 class="group"><%= capoeiristas[i].group %></h3>
+                  <h4 class="country"><%= capoeiristas[i].country %></h4>
+                </section>
+                <img class="logo" src="<%= capoeiristas[i].logo %>" >
+                <button class="delete">DELETE</button>
+                <button class="edit">Edit</button>
+              </div>
+            </div>
+            <form class="editForm hide">
+              <div>
+                <label for="name">Name:</label>
+                <input class="name" type="text" name="newName" placeholder="Enter name">
+              </div>
+              <div>
+                <label for="nickname">Capoeira Name:</label>
+                <input class="nickname" type="text" name="newNickname" placeholder="Enter Capoeira name">
+              </div>
+              <div>
+                <label for="rank">Rank:</label>
+                <input class="rank" type="text" name="newRank" placeholder="Enter rank (Graduado/Monitor/Formado)">
+              </div>
+              <div>
+                <label for="group">Group Name:</label>
+                <input class="group" type="text" name="newGroup" placeholder="Enter group name">
+              </div>
+              <div>
+                <label for="country">Country:</label>
+                <input class="country" type="text" name="newCountry" placeholder="Enter country">
+              </div>
+              <div>
+                <label for="logo">Group Logo:</label>
+                <input class="logo" type="file" name="file-to-upload">
+              </div>
+              <input type="submit" class="submit submitEdit" value="Submit">
+              <button type="button" class="cancelEdit">Cancel</button>
+            </form>
+          </li>
+      <% } %>
+    </ul>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

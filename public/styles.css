@@ -1,0 +1,139 @@
+h1 {
+  text-align: center;
+}
+
+#clearCompleted {
+  margin-top: 1%;
+  margin-left: 44.15%;
+}
+
+#list {
+  margin-left: 28.5%;
+}
+.person {
+  border: 2px solid black;
+  border-radius: 20px;
+  height: 200px;
+  width: 700px;
+  position: relative;
+  padding: 5px;
+  list-style-type: none;
+  margin-top: 1%;
+}
+
+.logo {
+  z-index: 4;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.editActive {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  border-radius: 20px;
+  height: 210px;
+  width: 695px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.new {
+  margin-left: 36.5%;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 25%;
+  padding: 10px;
+}
+
+.editForm {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  border-radius: 20px;
+  border: 2px solid green;
+  background-color: white;
+  padding: 4px;
+  z-index: 2;
+}
+
+.hide {
+  display: none;
+}
+
+div {
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+
+div > label {
+  float: left;
+  margin-right: 2px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 55%;
+}
+
+label[for='name'] {
+  margin-left: 61px;
+}
+
+label[for='rank'] {
+  margin-left: 66px;
+}
+
+label[for='group'] {
+  margin-left: 16px;
+}
+
+label[for='country'] {
+  margin-left: 47px;
+}
+label[for='logo'] {
+  margin-left: 20px;
+}
+
+#logo {
+  border: none;
+}
+
+.submitNew {
+  margin-left: 25%;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+.info {
+  float: left;
+}
+
+.rank, .nickname {
+  display: inline;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  float: right;
+}
+
+.edit {
+  position: absolute;
+  top: 170px;
+  left: 575px;
+}
+
+.delete {
+  position: absolute;
+  top: 170px;
+  left: 625px;
+}
